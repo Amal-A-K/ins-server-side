@@ -20,6 +20,20 @@ module.exports = {
             res.status(400).json({ err })
         }
     },
+    addStudent: async (req, res) => {
+        const { student } = req.body;
+        const {id} = req.params;
+        console.log(id, req.body);
+        const result1 = await StudSchema.findByIdAndUpdate(id, { $push: { Student: req.body } })
+        if (result1) {
+            console.log(result1);
+            res.status(200).json({ result1 })
+        }
+        else {
+            res.status(400).json("failed to push student details" )
+        }
+
+    },
     getStud: async (req, res) => {
         try {
             const result2 = await StudSchema.find()

@@ -4,6 +4,7 @@ const StudController=require('../Controller/StudController');
 const StudentSchema = require('../model/StudentSchema');
 
 router.post('/addSTUD',StudController.addStud)
+router.put('/pushSTUD/:id',StudController.addStudent)
 router.get('/getSTUD',StudController.getStud)
 router.get('/getById/:id',StudController.getStudById)
 router.put('/update/:id',StudController.updateStud)

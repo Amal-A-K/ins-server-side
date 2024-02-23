@@ -17,5 +17,5 @@ dotenv.config();
 const PORT = process.env.PORT;
 connect();
 app.listen(PORT, () => {
-    console.log(`App listening to tthe port ${PORT}`);
+    console.log(`App listening to the port ${PORT}`);
 })

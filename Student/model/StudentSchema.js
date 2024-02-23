@@ -11,7 +11,7 @@ const StudentSchema = new Schema({
         // required: true
     },
     DateOfBirth: {
-        type: Number,
+        type: String,
         // required: true
     },
     Email: {
