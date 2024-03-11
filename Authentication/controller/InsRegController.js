@@ -76,6 +76,7 @@ module.exports = {
         const InstituteId = req.params.id
         const UserId=req.params.userid
         console.log(req.body);
+        
         try {
             await Registration.findByIdAndUpdate(InstituteId,
                 {
