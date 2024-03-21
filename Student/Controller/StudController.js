@@ -24,12 +24,14 @@ module.exports = {
         const { student } = req.body;
         const { id } = req.params;
         console.log(id, req.body);
+        
         const result1 = await StudSchema.findByIdAndUpdate(id, { $push: { Student: req.body } })
         if (result1) {
             console.log(result1);
             res.status(200).json({ result1 })
         }
         else {
+            console.log("failed to push student details")
             res.status(400).json("failed to push student details")
         }
 
